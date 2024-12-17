@@ -1,5 +1,4 @@
-const uri = "https://newsjsonstatic.vercel.app/";
-// const uri = "http://localhost:3000/";
+const uri = "https://newsapi-phi.vercel.app/";
 const news = document.querySelector(".news");
 const create = document.getElementById("create");
 const update = document.getElementById("update");
