@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --pri: #ffffff;
+    --sec: #cccccc;
+    --ter: #999999;
+    --qua: #555555;
+    --qui: #000000;
+    --transparent: rgba(0, 0, 0, 0.5);
+
+}
+
+body {
+    background-color: var(--sec);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+header,
+footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--qui);
+    color: var(--pri);
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px;
+}
+
+form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--qua);
+}
+
+form textarea {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--qua);
+}
+
+button {
+    padding: 10px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--ter);
+    color: var(--pri);
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pri);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--qua);
+        margin: 10px;
+    }
+
+    .card img{
+        width: 100%;
+        max-width: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--transparent);
+    width: 100vw;
+    height: 100vh;
+
+    .janela {
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--pri);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--qua);
+    }
+}
+
+.oculto {
+    display: none;
+}

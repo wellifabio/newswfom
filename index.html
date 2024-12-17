@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>wellifabio Notícias</title>
+</head>
+
+<body>
+    <header>
+        <h1>wellifabio Notícias</h1>
+    </header>
+    <main>
+        <h2>Notícias</h2>
+        <div class="news">
+        </div>
+    </main>
+    <footer>
+        <h2>By Wellington</h2>
+        <button onclick="cadastro.classList.remove('oculto')">Nova notícia</button>
+    </footer>
+    <div id="cadastro" class="modal oculto">
+        <div class="janela">
+            <h2>Adicionar Notícia</h2>
+            <form id="create">
+                <label for="title">Título</label>
+                <input type="text" name="title" required>
+                <label for="content">Conteúdo</label>
+                <textarea name="content" required></textarea>
+                <label for="img">Conteúdo</label>
+                <input type="text" name="img" placeholder="url da imagem">
+                <button type="reset" onclick="cadastro.classList.add('oculto')">Cancelar</button>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+    <div id="alteracao" class="modal oculto">
+        <div class="janela">
+            <h2>Alterar Notícia</h2>
+            <form id="update">
+                <input type="hidden" id="id" name="id" required>
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">Conteúdo</label>
+                <textarea id="content" name="content" required></textarea>
+                <label for="img">Imagem</label>
+                <input type="text" id="img" name="img">
+                <button type="reset" onclick="alteracao.classList.add('oculto')">Cancelar</button>
+                <button type="submit">Alterar</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
